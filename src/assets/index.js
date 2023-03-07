@@ -5,5 +5,5 @@ import preview from './preview.png';
 export {
   download,
   logo,
-  preview,
+  preview
 };
