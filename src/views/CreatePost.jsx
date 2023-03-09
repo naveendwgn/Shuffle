@@ -16,12 +16,54 @@ const CreatePost = () => {
   const [generating, setGenerating] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const generateImage = () => {
-      
+  const generateImage = async () => {
+      if(form.prompt){
+        try {
+          setGenerating(true);
+          const response = await fetch('https://brick-red-lamb-tux.cyclic.app/api/v1/dalle', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({  prompt: form.prompt }),
+        });
+        const data = await response.json();
+        setForm({ ...form, photo: `data:image/jpeg;base64,${data.photo}` });
+        } catch (error) {
+          alert(error.message);
+        } finally {
+          setGenerating(false);
+        }
+      } else {
+        alert('Please enter a prompt');
+      }
   }
 
-  const handleSubmit = () => {
+  const handleSubmit = async (e) => {
+        e.preventDefault();
 
+        if (form.name && form.prompt && form.photo) {
+          try {
+            setLoading(true);
+            const response = await fetch('https://brick-red-lamb-tux.cyclic.app/api/v1/post', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(form),
+            });
+            const data = await response.json();
+            if (data.success) {
+              navigate('/');
+            }
+          } catch (error) {
+            alert(error);
+          } finally {
+            setLoading(false);
+          }
+        } else {
+          alert('Please fill all the fields');
+        }
   } 
 
   const handleChange = (e) => {
@@ -91,6 +133,7 @@ const CreatePost = () => {
             {generating ? 'Generating...' : 'Generate'}
           </button>
         </div>
+      {/* THIS IS FOR SHARING IN THE WILD
         <div className="mt-5">
           <p className='mt-2 text-[#4b5563] text-[16px]'>
             If you want to share the post in the wild you can.
@@ -100,8 +143,9 @@ const CreatePost = () => {
             className='mt-5 ml-auto w-full sm:w-auto py-2.5 px-5 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-[#0f0f0f] hover:bg-[#ea3e3e] focus:outline-none'
             >
             {loading ? 'Sharing...' : 'Share in the wild'}
-            </button>
+          </button>
         </div>
+        */}
       </form> 
     </section>
   )

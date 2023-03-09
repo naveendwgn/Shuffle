@@ -3,8 +3,10 @@ import React, { useState, useEffect} from 'react';
 import { Loader, Card, FormField } from '../components';
 
 const RenderCards = ({ data, title}) => {
-  if (data?.length > 0) { 
-    return data.map((post) => <Card key={post._id} {...post} />)
+  if (data?.length > 0) {
+    return (
+      data.map((post) => <Card key={post._id} {...post} />)
+    );
   }
 
   return (
@@ -18,15 +20,39 @@ const Home = () => {
   const [loading, setLoading] = useState(false);
   const [allposts, setAllPosts] = useState([]);
 
-  const [searchText, setSearchText] = useState('apple');
+  const [searchText, setSearchText] = useState('');
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      setLoading(true);
+      try {
+        const response = await fetch('https://brick-red-lamb-tux.cyclic.app/api/v1/post', {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        });
+        if (response.ok) {
+        const result = await response.json();
+        setAllPosts(result.data.reverse());
+        }
+      } catch (error) {
+        alert(error.message);
+      } finally {
+        setLoading(false);
+      }
+    }
+    fetchPosts();
+  }, []);
+
   return (
     <section className="max-w7x1 mx-auto">
-      <div>
-        <h1 className="font-bold text-[#151616] text-[70px]">Discover the magic of Shuffle,</h1>
+      <div className= "flex flex-col items-center justify-center mt-20">
+        <h1 className="font-bold text-[#151616] text-[90px]">Discover the magic of Shuffle,</h1>
         <h3 className="text-[#151616] text-[30px]">the app that turns your words into incredible images.</h3>
         <p className='mt-1 text-[#4b5563] text-[15px]'>With DALL-E technology, your ideas will be brought to life like never before.</p>
       </div>
-
+{/*
       <div className="mt-16">
         <FormField />
       </div>
@@ -51,7 +77,7 @@ const Home = () => {
               /> 
           ) : (
             <RenderCards 
-              data={[]}
+              data={[allposts]}
               title="No posts found" 
               />
           )}
@@ -59,6 +85,7 @@ const Home = () => {
         </>  
         )}
         </div>
+*/}
     </section>
   )
 }
