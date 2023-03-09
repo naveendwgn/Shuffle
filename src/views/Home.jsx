@@ -22,7 +22,7 @@ const Home = () => {
   return (
     <section className="max-w7x1 mx-auto">
       <div>
-        <h1 className="font-extrabold text-[#222328] text-[32px]">Lets Shuffle!</h1>
+        <h1 className="font-extrabold text-[#151616] text-[32px]">Lets Shuffle!</h1>
         <p className='mt-2 text-[#4b5563] text-[16px]'>Shuffle: Where words meet art, powered by DALL-E AI.</p>
       </div>
 

@@ -9,7 +9,7 @@ const App = () => {
     <BrowserRouter>
        <header className="w-full flex justify-between items-center bg-[#000000f1] sm:px-8 px-4 py-3 border-b border-b-gray-200">
         <Link to="/">
-           <h1 className="font-sans text-2xl font-semibold text-slate-50" >Shuffle</h1> 
+           <h1 className="font-sans text-2xl font-bold text-slate-50" >Shuffle</h1> 
         </Link>
 
         <Link to="/create-post" className="font-inter font-medium  text-white px-4 py-2">
