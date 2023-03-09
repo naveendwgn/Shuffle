@@ -22,8 +22,9 @@ const Home = () => {
   return (
     <section className="max-w7x1 mx-auto">
       <div>
-        <h1 className="font-extrabold text-[#151616] text-[32px]">Lets Shuffle!</h1>
-        <p className='mt-2 text-[#4b5563] text-[16px]'>Shuffle: Where words meet art, powered by DALL-E AI.</p>
+        <h1 className="font-bold text-[#151616] text-[70px]">Discover the magic of Shuffle,</h1>
+        <h3 className="text-[#151616] text-[30px]">the app that turns your words into incredible images.</h3>
+        <p className='mt-1 text-[#4b5563] text-[15px]'>With DALL-E technology, your ideas will be brought to life like never before.</p>
       </div>
 
       <div className="mt-16">
