@@ -1,6 +1,6 @@
 # Shuffle
 
-Shuffle is a web-app which creates realistic images and art from complex text prompts for a wide range of concepts
+The ongoing Implementation of Shuffle which is a web-app which creates realistic images and art from complex text prompts for a wide range of concepts
 expressible in natural language
 
 ## Technologies
