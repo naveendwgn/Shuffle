@@ -79,10 +79,10 @@ const CreatePost = () => {
     <section className="max-w-7xl mx-auto">
       <div>
         <h1 className="font-extrabold text-[#151616] text-[32px]">Create</h1>
-        <p className='mt-2 text-[#4b5563] text-[16px]'>Create a new W post with a prompt and share them with the world.</p>
+        <p className='mt-2 text-[#4b5563] text-[16px]'>Add a prompt of your choice or tap surprise me button to generate</p>
       </div>
 
-      <form className="mt-16 max-w-3xl" onSubmit={handleSubmit}>
+      <form className="mt-8 max-w-3xl" onSubmit={handleSubmit}>
         <div className="flex flex-col space-y-4">
           <FormField
             LabelName="Name"

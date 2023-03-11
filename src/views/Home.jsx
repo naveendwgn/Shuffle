@@ -1,6 +1,8 @@
 import React, { useState, useEffect} from 'react';
 
 import { Loader, Card, FormField } from '../components';
+import CreatePost from './CreatePost';
+
 
 const RenderCards = ({ data, title}) => {
   if (data?.length > 0) {
@@ -47,10 +49,13 @@ const Home = () => {
 
   return (
     <section className="max-w7x1 mx-auto">
-      <div className= "flex flex-col items-center justify-center mt-20">
-        <h1 className="font-bold text-[#151616] text-[90px]">Discover the magic of Shuffle,</h1>
+      <div className= "flex flex-col items-center justify-center mt-28">
+        <h1 className="font-bold text-[#151616] text-[80px]">Discover the magic of Shuffle,</h1>
         <h3 className="text-[#151616] text-[30px]">the app that turns your words into incredible images.</h3>
         <p className='mt-1 text-[#4b5563] text-[15px]'>With DALL-E technology, your ideas will be brought to life like never before.</p>
+        <button className='mt-8 bg-[#151616] text-[#fff] text-[16px] py-2 px-4 rounded-full'
+        onClick={() => navigate('/create-post')}>
+        Create</button>
       </div>
 {/*
       <div className="mt-16">
@@ -90,4 +95,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Home;
