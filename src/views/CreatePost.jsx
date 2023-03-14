@@ -78,12 +78,12 @@ const CreatePost = () => {
   return (
     <section className="max-w-7xl mx-auto">
       <div>
-        <h1 className="font-extrabold text-[#151616] text-[32px]">Create</h1>
+        <h1 className="font-extrabold text-[#1b1719] text-[32px]">Create</h1>
         <p className='mt-2 text-[#4b5563] text-[16px]'>Add a prompt of your choice or tap surprise me button to generate</p>
       </div>
 
       <form className="mt-8 max-w-3xl" onSubmit={handleSubmit}>
-        <div className="flex flex-col space-y-4">
+        <div className="flex flex-col space-y-4 bg">
           <FormField
             LabelName="Name"
             type="text"
@@ -128,7 +128,7 @@ const CreatePost = () => {
             type="button"
             onClick={generateImage}
 
-            className="w-full sm:w-auto py-2.5 px-5 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-[#0f0f0f] hover:bg-[#ea3e3e] focus:outline-none"
+            className="w-full sm:w-auto py-2.5 px-5 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-[#1b1719] hover:bg-[#ea3e3e] focus:outline-none"
           >
             {generating ? 'Generating...' : 'Generate'}
           </button>
