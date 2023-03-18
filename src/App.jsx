@@ -22,6 +22,9 @@ const App = () => {
           <Route path="/create-post" element={<CreatePost />} />
         </Routes>
         </main>
+          <footer className="w-full bg-[#efeae3] py-4 px-4 text-center text-[#1b1719]">
+            <p className="text-sm">© 2023 Shuffle. All rights reserved.</p>
+          </footer>
     </BrowserRouter>
   );
 }
