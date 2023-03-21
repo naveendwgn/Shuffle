@@ -6,14 +6,14 @@ const FormField = ({ LabelName, type, name, placeholder, value, handleChange, is
       <div className='flex items-center gap-2 mb-2'>
       <label
         htmlFor={name}
-        className='block text-sm font-medium text-[#373b42]'>
+        className='block text-sm font-medium text-[#ececec]'>
         {LabelName}
         </label>
         {isSurpriseMe && (
           <button
             type='button'
             onClick={handleSurpriseMe}
-            className='font-semibold text-xs bg-[#ECECF1] py-1 px-2 rounded-md text-[#373b42]'>
+            className='font-semibold text-xs bg-[#ffffff] py-1 px-2 rounded-md text-[#1E1C1C]'>
             Surprise me
           </button>
         )}
