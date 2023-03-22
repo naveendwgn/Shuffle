@@ -3,11 +3,11 @@
 The ongoing Implementation of Shuffle which is a web-app which creates realistic images and art from complex text prompts for a wide range of concepts
 expressible in natural language
 
+<img width="1080" alt="Screenshot 2023-03-22 203847" src="https://user-images.githubusercontent.com/114351583/226951251-c9c6b486-4f04-40af-93f7-e7fb2644fd19.png">
 
-<img width="1080" alt="Screenshot 2023-03-11 171303" src="https://user-images.githubusercontent.com/114351583/224482312-98a7aa7a-aa7c-4fd7-ae74-753813f95435.png">
+<img width="1080" alt="Screenshot 2023-03-22 203801" src="https://user-images.githubusercontent.com/114351583/226951395-f2bac8fc-46ff-46cb-a8fc-1546f9e22674.png">
 
-<img width="1080" alt="Screenshot 2023-03-11 171545" src="https://user-images.githubusercontent.com/114351583/224482468-9349b28b-6cd8-4f0d-9e22-58a2e6a7ab9f.png">
-
+<img width="1080" alt="Screenshot 2023-03-22 203624" src="https://user-images.githubusercontent.com/114351583/226951593-8cd12e49-4e88-4d8b-8157-03b2df727fb8.png">
 
 ## Technologies
 
