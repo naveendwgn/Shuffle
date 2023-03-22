@@ -42,7 +42,7 @@ const CreatePost = () => {
   const handleSubmit = async (e) => {
         e.preventDefault();
 
-        if (form.name && form.prompt && form.photo) {
+        if (form.prompt && form.photo) {
           try {
             setLoading(true);
             const response = await fetch('https://brick-red-lamb-tux.cyclic.app/api/v1/post', {
@@ -52,10 +52,9 @@ const CreatePost = () => {
               },
               body: JSON.stringify(form),
             });
-            const data = await response.json();
-            if (data.success) {
-              navigate('/');
-            }
+            
+            await response.json();
+            navigate('/his');
           } catch (error) {
             alert(error);
           } finally {
@@ -133,19 +132,19 @@ const CreatePost = () => {
             {generating ? 'Generating...' : 'Generate'}
           </button>
         </div>
-      {/* THIS IS FOR SHARING IN THE WILD
+      {/* THIS IS FOR SHARING IN THE WILD */}
         <div className="mt-5">
-          <p className='mt-2 text-[#4b5563] text-[16px]'>
-            If you want to share the post in the wild you can.
+          <p className='mt-2 text-sm text-[#f0f0f0] text-[16px]'>
+            If you want to save you can the image can be found in the history tab.
           </p>
           <button
             type="submit"
-            className='mt-5 ml-auto w-full sm:w-auto py-2.5 px-5 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-[#0f0f0f] hover:bg-[#ea3e3e] focus:outline-none'
+            className='mt-5 ml-auto w-full sm:w-auto py-2.5 px-5 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-[#FF4545] hover:bg-[#ea3e3e] focus:outline-none'
             >
-            {loading ? 'Sharing...' : 'Share in the wild'}
+            {loading ? 'Saving...' : 'Save'}
           </button>
         </div>
-        */}
+        
       </form> 
     </section>
   )

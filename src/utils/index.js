@@ -10,6 +10,6 @@ export function getRandomPrompt(prompt) {
   return randomPrompt;
 }
 
-export async function downloadImage(_id, photo) {
-  FileSaver.saveAs(photo, `download-${_id}.jpg`);
+export async function downloadImage(i, photo) {
+  FileSaver.saveAs(photo, `download-${i}.jpg`);
 }
