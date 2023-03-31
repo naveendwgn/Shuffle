@@ -34,7 +34,11 @@ const App = () => {
             <div className="flex flex-col items-center">
             <p className="text-sm text-white">Powered by <a className=' text-sm font-semibold text-[#ff4545]'
             href="https://openai.com/">Open AI</a> © 2023 Shuffle.</p>
-            <p className="text-sm text-white">Made with ❤️ by <span className='text-[#ff4545]'>Naveen Dewangan</span></p>
+            <p className="text-sm text-white">Made with ❤️ by <span className='text-[#ff4545]'>
+              <a className=' text-sm font-semibold text-[#ff4545]' href="https://github.com/naveendwgn">
+                Naveen Dewangan
+              </a>
+              </span></p>
             </div>
           </footer>
     </BrowserRouter>
