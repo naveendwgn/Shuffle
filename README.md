@@ -1,6 +1,6 @@
 # Shuffle
 
-The ongoing Implementation of Shuffle which is a web-app which creates realistic images and art from complex text prompts for a wide range of concepts
+Shuffle which is a web-app which creates realistic images and art from complex text prompts for a wide range of concepts
 expressible in natural language
 
 <img width="1080" alt="Screenshot 2023-03-22 203847" src="https://user-images.githubusercontent.com/114351583/226951251-c9c6b486-4f04-40af-93f7-e7fb2644fd19.png">
